@@ -5,8 +5,9 @@
 
 #############################
 
-# arge Custom ignore
+# Custom ignore
 Web.Resources/Frontend/*
+!Web.Resources/Frontend/dummy.txt
 
 PoC_MAUI_V1.AppMain/Resources/Raw/lernverlauf.s3db
 
