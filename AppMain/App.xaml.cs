@@ -8,4 +8,18 @@ public partial class App : Application
 
 		MainPage = new AppShell();
 	}
+
+#if WINDOWS
+        protected override Window CreateWindow(IActivationState activationState)
+        {
+            Window window = base.CreateWindow(activationState);
+
+            if (window != null)
+            {
+                window.Title = "Family Expenses List";
+            }
+
+            return window;
+        }
+#endif
 }
