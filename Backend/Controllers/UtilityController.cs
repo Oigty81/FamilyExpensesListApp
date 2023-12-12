@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Backend.Controllers
+﻿namespace Backend.Controllers
 {
+    using Backend;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/utility")]
     [ApiController]
     public class UtilityController : ControllerBase
@@ -14,7 +15,11 @@ namespace Backend.Controllers
         [Route("quit")]
         public async Task<ActionResult<bool>> Quit()
         {
-            //CommunicationServices.SystemUtilitiesInstance.Quit();
+            if(BackendMain.SystemUtilitiesInstance != null)
+            {
+               BackendMain.SystemUtilitiesInstance.QuitApplication();
+            }
+
             return true;
         }
 
@@ -22,7 +27,11 @@ namespace Backend.Controllers
         [Route("minimize")]
         public async Task<ActionResult<bool>> Minimize()
         {
-            ////CommunicationServices.SystemUtilitiesInstance.MinimizeApplication();
+            if(BackendMain.SystemUtilitiesInstance != null)
+            {
+                BackendMain.SystemUtilitiesInstance.MinimizeApplication();
+            }
+
             return true;
         }
 
@@ -30,7 +39,12 @@ namespace Backend.Controllers
         [Route("batterystate")]
         public async Task<ActionResult<int>> BatteryState()
         {
-            int batteryStateInt = 50; ////CommunicationServices.SystemUtilitiesInstance.GetBatteryState();
+            int batteryStateInt = 0;
+
+            if(BackendMain.SystemUtilitiesInstance != null)
+            {
+                batteryStateInt = BackendMain.SystemUtilitiesInstance.GetBatteryState();
+            }
 
             return batteryStateInt;
         }
