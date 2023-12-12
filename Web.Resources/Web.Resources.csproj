@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -6,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="StaticWebResources\**"/>
+    <EmbeddedResource Remove="StaticWebResources\**"/>
+    <None Remove="StaticWebResources\**"/>
+  <None Remove="Frontend\dummy.txt"/><EmbeddedResource Include="Frontend\dummy.txt"/></ItemGroup>
+
+  <ItemGroup>    
+  <None Remove="TestStaticWebResources\index.html"/><None Remove="TestStaticWebResources\index.js"/><None Remove="TestStaticWebResources\jquery.min.js"/><None Remove="TestStaticWebResources\styles.css"/></ItemGroup>
+  <ItemGroup>
+  <EmbeddedResource Include="TestStaticWebResources\index.html"/><EmbeddedResource Include="TestStaticWebResources\index.js"/><EmbeddedResource Include="TestStaticWebResources\jquery.min.js"/><EmbeddedResource Include="TestStaticWebResources\styles.css"/></ItemGroup>
 </Project>

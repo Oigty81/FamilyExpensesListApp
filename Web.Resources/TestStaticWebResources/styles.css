@@ -1,0 +1,14 @@
+body {
+    background-color:#002244;
+    color: #c0c0c0;
+}
+
+p {
+    color: yellow;
+}
+
+.btns {
+    margin: 20px;
+    background-color: red;
+    color: blue;
+}
