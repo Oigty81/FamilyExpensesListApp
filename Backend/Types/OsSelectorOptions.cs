@@ -4,6 +4,6 @@
     {
         Windows,
         Android,
-        IOs,
+        IOS,
     }
 }
