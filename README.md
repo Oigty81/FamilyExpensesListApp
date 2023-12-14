@@ -14,7 +14,7 @@ in Progress
 ### Todo
 
 - [ ] added controller for routes: user, category and expenses
-- [ ] added config-data-provider for common app
+- [ ] update config-data-provider for common app -> load config from external file
 - [ ] added optionally basic authentication service for local TCP/HTTP-Channel
 - [ ] added HTTP-Client for communication with remote-backend
 - [ ] implement dynamic free-port-search for Webservicehost
