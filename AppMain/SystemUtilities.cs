@@ -1,9 +1,9 @@
 ﻿namespace AppMain
 {
-    using Backend;
-    using Backend.Utilities;
-    using Backend.Types;
     using System.Diagnostics;
+    using Backend;
+    using Backend.Types;
+    using Backend.Utilities;
 
 #if WINDOWS
     using Microsoft.UI;

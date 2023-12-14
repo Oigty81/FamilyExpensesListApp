@@ -5,7 +5,7 @@ namespace AppMain;
 public partial class MainPage : ContentPage
 {
     ////TODO: move this options in config later
-    private bool shouldOpenBrowser = false; //// set true to open frontend in browser optional (for debugging etc.)
+    private bool shouldOpenBrowser = false; ////set true to open frontend in browser optional (for debugging etc.)
     private bool useTestStaticWebResouces = false; //// set true to use "TestStaticWebResources" (for test Backend instead) "Frontend" (SPA Bundle)
 
     public MainPage()

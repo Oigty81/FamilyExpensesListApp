@@ -2,8 +2,8 @@
 
 using Backend;
 using Backend.Types;
-using Backend.Utilities;
 using Microsoft.Maui.LifecycleEvents;
+using System.Reflection;
 
 #if WINDOWS
     using Microsoft.UI;
@@ -93,7 +93,7 @@ public static class MauiProgram
             osSelector = OsSelectorOptions.Windows;
 #endif
 
-        BackendMain.StartUp(new DllResourceLoader("Web.Resources"), new SystemUtilities(osSelector, appDirectory));
+        BackendMain.StartUp("Web.Resources", new SystemUtilities(osSelector, appDirectory));
 
         return builder.Build();
     }

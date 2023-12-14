@@ -11,9 +11,21 @@
 
         public static IResourceLoader? RessourceLoader { get; private set; }
 
-        public static void StartUp(IResourceLoader ressourceLoader, ISystemUtilities systemUtilities)
+        public static void StartUp(string webResourcesProject, ISystemUtilities systemUtilities)
         {
-            IWebserviceHost host = new WebserviceHost(ressourceLoader, systemUtilities);
+            ILoggingService loggingService = new LoggingService();
+            IResourceLoader ressourceLoader = new DllResourceLoader(loggingService, webResourcesProject);
+            IMimeTypeService mimeTypeService = new MimeTypeService();
+            IControllerService controllerService = new ControllerService();
+            IDecoderService decoderService = new DecoderService(loggingService);
+
+            IWebserviceHost host = new WebserviceHost(
+                loggingService,
+                ressourceLoader,
+                mimeTypeService,
+                controllerService,
+                decoderService,
+                systemUtilities);
 
             WebServiceHostInstance = host;
             SystemUtilitiesInstance = systemUtilities;

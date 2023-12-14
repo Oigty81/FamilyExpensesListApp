@@ -5,10 +5,12 @@
 
     public class DllResourceLoader : IResourceLoader
     {
+        private readonly ILoggingService loggingService;
         private readonly string resourceBase;
 
-        public DllResourceLoader(string resourceBase)
+        public DllResourceLoader(ILoggingService loggingService, string resourceBase)
         {
+            this.loggingService = loggingService;
             this.resourceBase = resourceBase;
         }
 
@@ -44,8 +46,7 @@
             }
             catch (Exception e)
             {
-                ////TODO: implement logservice
-                Console.WriteLine(e.Message);
+                this.loggingService.LogConsole(e.Message);
             }
 
             return Encoding.Default.GetBytes(url);

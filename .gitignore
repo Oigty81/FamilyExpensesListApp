@@ -7,7 +7,7 @@
 
 # Custom ignore
 Web.Resources/Frontend/*
-!Web.Resources/Frontend/dummy.txt
+!Web.Resources/Frontend/logo.png
 
 PoC_MAUI_V1.AppMain/Resources/Raw/lernverlauf.s3db
 
