@@ -6,11 +6,9 @@
     {
         public event Action<bool>? Connected;
 
-        public int HttpPort { get; set; }
+        public int HttpPort { get; }
 
-        public bool IsConnected { get; set; }
-
-        public ISystemUtilities SystemUtilities { get; set; }
+        public bool IsConnected { get; }
 
         public void StartListening();
 
