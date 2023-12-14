@@ -11,6 +11,7 @@
         [Route("getExpensesPeriod")]
         public async Task<ActionResult<bool>> ExpensesPeriod()
         {
+            ////TODO: implement it
             return true;
         }
 
@@ -18,6 +19,7 @@
         [Route("putExpenses")]
         public async Task<ActionResult<bool>> PutExpenses()
         {
+            ////TODO: implement it
             return true;
         }
     }
