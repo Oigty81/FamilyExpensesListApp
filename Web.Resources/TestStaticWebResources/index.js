@@ -13,9 +13,13 @@ $(document).ready(function () {
 
     $("#btn3").click(function () {
         console.log("click batterystate ");
-
-        $.get("api/utility/batterystate", function (val) {
-            console.log("return batterty state value: ", val);
-        });
+        $("#batstate").text("xx");
+        setTimeout(() => {
+            $.get("api/utility/batterystate", function (val) {
+                $("#batstate").text(val);
+                console.log("return batterty state value: ", val);
+            });
+        }, 250);
+       
     });
 });
