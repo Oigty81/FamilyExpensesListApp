@@ -3,11 +3,11 @@
     using Backend;
     using Microsoft.AspNetCore.Mvc;
 
-    [Route("api/utility")]
+    [Route("api/utilities")]
     [ApiController]
-    public class UtilityController : ControllerBase
+    public class UtilitiesController : ControllerBase
     {
-        public UtilityController()
+        public UtilitiesController()
         {
         }
 
