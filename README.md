@@ -60,7 +60,7 @@ VITE_LOCAL_REQUEST_BASE_VERSION=
 npm run build:maui
 ```
 
-- after the bundle-build in your `FamilieExpensesListApp`-Project Visual-Studio possibly shows the old embedded-file-references from an previous build
+- after the bundle-build in your `FamilieExpensesListApp`-Project Visual-Studio possibly shows the old embedded-file-references from a previous build
 
 ![](./docs/fe_after_build.png)
 
